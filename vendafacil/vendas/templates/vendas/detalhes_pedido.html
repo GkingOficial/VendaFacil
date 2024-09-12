@@ -1,0 +1,21 @@
+<h1>Pedido {{ pedido.id }}</h1>
+
+<p>Data: {{ pedido.data }}</p>
+
+<table>
+    <tr>
+        <th>Produto</th>
+        <th>Valor</th>
+    </tr>
+
+    {% for produto in pedido.produtos.all %}
+    <tr>
+        <th>{{ produto.nome }}</th>
+        <th>R$ {{ produto.preco }}</th>
+    </tr>
+    {% endfor %}
+
+    <tr>
+        <th>Valor total: {{ pedido.valor_total }}</th>
+    </tr>
+</table>
