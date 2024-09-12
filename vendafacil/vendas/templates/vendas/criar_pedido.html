@@ -1,0 +1,14 @@
+<h1>Criar Pedido</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                <input type="checkbox" name="produtos" value="{{ produto.id }}">
+                {{ produto.nome }} - R${{ produto.preco }}
+            </li>
+        {% endfor %}
+    </ul>
+    <button type="submit">Finalizar pedido</button>
+</form>

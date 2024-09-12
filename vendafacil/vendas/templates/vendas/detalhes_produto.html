@@ -1,0 +1,7 @@
+<h1>{{ produto.nome }}</h1>
+
+<p>Categoria: {{ produto.categoria }}</p>
+<p>Preço: R${{ produto.preco }}</p>
+<p>Estoque: {{ produto.estoque }}</p>
+
+<a href="{% url 'criar_pedido' %}">Adicionar ao pedido</a>
