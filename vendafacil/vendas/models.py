@@ -7,7 +7,7 @@ class Produto(models.Model):
     estoque = models.IntegerField()
 
     def __str__(self):
-        self.nome
+        return self.nome
 
 class Pedido(models.Model):
     produtos = models.ManyToManyField(Produto)
